@@ -1,0 +1,19 @@
+Creating QR code for multiple certificates in ms word using mail merge and DisplayBarcode function.
+
+Steps: 
+1. Prepare spreadsheet for certificate receivers.
+2. Create a certificate template or use pre made certificate template on MS word.
+3. Go to mailings menu and select recepients (select the prepared spreadsheet that you are created on 1st step).
+4. Select the place where you want to merge colunm date into certificate and then Click on Insert Merge Field.
+5. and select the colunm name that you want to show.
+6. Now, Click or tap where you want display the barcode or QR code.
+7. Press ctrl+F9 (important without it DisplayBarcode code will not work).
+8. After pressing ctrl+F9 , {} brackets willl appear.
+9. Under this Brackets type the code for DisplayBarcode function.
+
+     {DisplayBarcode "{MERGEFIELD qrcode}" QR \q 3}
+           QR - QR 2d barcode
+           \q - error correction level of qr code. valid values 0-3.
+		   
+
+To see usage you can visit https://support.microsoft.com/en-au/office/field-codes-displaybarcode-6d81eade-762d-4b44-ae81-f9d3d9e07be3
